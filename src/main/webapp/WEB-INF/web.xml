@@ -1,0 +1,35 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<servlet>
+		<servlet-name>payprocess</servlet-name>
+		<servlet-class>com.app.servlet.CardPayServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>payprocess</servlet-name>
+		<url-pattern>/dopay</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>payhistory</servlet-name>
+		<servlet-class>com.app.servlet.CardPayHistoryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>payhistory</servlet-name>
+		<url-pattern>/getAll</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>payinfo</servlet-name>
+		<servlet-class>com.app.servlet.CardPayInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>payinfo</servlet-name>
+		<url-pattern>/viewinfo</url-pattern>
+	</servlet-mapping>
+	
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
